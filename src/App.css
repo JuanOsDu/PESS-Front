@@ -1,0 +1,35 @@
+.gridInput{
+  object-fit: contain;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  margin-top:20% !important;
+ 
+  gap: .5rem;
+}
+
+
+.img{
+  object-fit: contain ;
+  
+  border-right: 1px solid black;
+
+  background-repeat: no-repeat;
+  width: 100% !important;
+ 
+ 
+}
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-fit: cover !important;
+  width: 100%;
+  height:100%;
+}
+.fill img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
