@@ -20,10 +20,7 @@ function Login() {
           <Grid item xs={4} className="gridInput" >
             <div >
               <div>
-                <h1>Login</h1>
-                <nav>
-                  <Link to="https://www.facebook.com/">Ir Facebook</Link>
-                </nav>
+                <h1>Login PESS</h1>
               </div>
               <img src={im} style={{ width: "200px" }}></img>
 
@@ -40,6 +37,10 @@ function Login() {
               <Button variant="outlined">Ingresar</Button>
 
             </div>
+
+            <nav>
+                  <Link to="https://www.facebook.com/">Ir Facebook</Link>
+                </nav>
 
 
           </Grid>
