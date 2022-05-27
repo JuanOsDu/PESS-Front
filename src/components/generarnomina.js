@@ -2,7 +2,7 @@ import { React, Fragment } from "react";
 import { Button, h4, Grid, Card, Box, CardContent, Typography, CardActions } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Link } from 'react-router-dom';
-import './App.css';
+import '../App.css';
 const bull = (
     <Box
         component="span"
@@ -10,24 +10,26 @@ const bull = (
     >
     </Box>
 );
-function Agregarempleado() {
+function Generarnomina() {
     return (
-        <div className="Agregarempleado">
+        <div className="Generarnomina">
             <Box className="card-insert" sx={{ minWidth: 250 }}>
                 <Card>
                     <div className="top">
-                        <h1>Información del Empleado</h1>
+                        <h1>Información de los Ingresos</h1>
                         <div className="top-content">
+                            <Link to="/components/welcome">
                                 <Button variant="outlined" onclick="history.back()">
                                     <ArrowBackIcon>
                                     </ArrowBackIcon>
                                 </Button>
+                            </Link>
                         </div>
                     </div>
                     <br></br>
                     <Grid container spacing={1} className="container-son" >
                         <Grid h4 item xs={3} >
-                            Nombre
+                            Fecha de pago
                             <p><input placeholder="" className="border" /></p>
                             Telefono
                             <p><input placeholder="" className="border" /></p>
@@ -44,9 +46,9 @@ function Agregarempleado() {
                             Apellido
                             <p><input placeholder="" className="border" /></p>
                             Correo Electrónico
-                            <p><input placeholder="" className="border"/></p>
+                            <p><input placeholder="" className="border" /></p>
                             Cargo
-                            <p><input placeholder="" className="border"/></p>
+                            <p><input placeholder="" className="border" /></p>
                             Departamento
                             <p><input placeholder="" className="border" /></p>
                             Contraseña
@@ -70,5 +72,5 @@ function Agregarempleado() {
         </div >
     );
 }
-export default Agregarempleado;
+export default Generarnomina;
 

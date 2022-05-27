@@ -28,7 +28,7 @@ function Login() {
               <TextField placeholder="Contraseña" type="password" className="gridInputSon"></TextField>
             </div>
             <div>
-            <Link to="/welcome"> 
+            <Link to="/components/welcome"> 
               <Button variant="outlined">Ingresar</Button>
               </Link>
             </div>

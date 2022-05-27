@@ -2,8 +2,7 @@ import { React, Fragment } from "react";
 import { Button, h4, Grid, Card, Box, CardContent, Typography, CardActions } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Link } from 'react-router-dom';
-import ResponsiveAppBar from "./Navbar";
-import './App.css';
+import '../App.css';
 const bull = (
     <Box
         component="span"
@@ -11,19 +10,17 @@ const bull = (
     >
     </Box>
 );
-function Infoempleado() {
+function Agregarempleado() {
     return (
-        <div className="Infoempleado">
-<ResponsiveAppBar/>
+        <div className="Agregarempleado">
             <Box className="card-insert" sx={{ minWidth: 250 }}>
                 <Card>
                     <div className="top">
                         <h1>Información del Empleado</h1>
                         <div className="top-content">
-                            <Link to="/login">
-                                <Button variant="outlined">
-                                    <ArrowBackIcon onClick={event => console.log("hgo")}>
-                                        <Link to="/login"></Link>
+                            <Link to="/components/welcome">
+                                <Button variant="outlined" onclick="history.back()">
+                                    <ArrowBackIcon>
                                     </ArrowBackIcon>
                                 </Button>
                             </Link>
@@ -49,9 +46,9 @@ function Infoempleado() {
                             Apellido
                             <p><input placeholder="" className="border" /></p>
                             Correo Electrónico
-                            <p><input placeholder="" className="border"/></p>
+                            <p><input placeholder="" className="border" /></p>
                             Cargo
-                            <p><input placeholder="" className="border"/></p>
+                            <p><input placeholder="" className="border" /></p>
                             Departamento
                             <p><input placeholder="" className="border" /></p>
                             Contraseña
@@ -75,5 +72,5 @@ function Infoempleado() {
         </div >
     );
 }
-export default Infoempleado;
+export default Agregarempleado;
 

@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Login from './login';
-import Agregarempleado from './agregarempleado';
-import Welcome from './welcome';
+import Agregarempleado from './components/agregarempleado';
+import Generarnomina from './components/generarnomina';
+import Welcome from './components/welcome';
 import reportWebVitals from './reportWebVitals';
 
 import {
@@ -16,8 +17,9 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/login" element={<Login />}></Route>
-      <Route path="/agregarempleado" element={<Agregarempleado />}></Route>
-      <Route path="/welcome" element={<Welcome />}></Route>
+      <Route path="/components/agregarempleado" element={<Agregarempleado />}></Route>
+      <Route path="/components/generarnomina" element={<Generarnomina />}></Route>
+      <Route path="/components/welcome" element={<Welcome />}></Route>
     </Routes>
   </BrowserRouter>
 );

@@ -2,7 +2,7 @@ import { React, Fragment } from "react";
 import { Button, h4, Grid, Card, Box, CardContent, Typography, CardActions } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Link } from 'react-router-dom';
-import './App.css';
+import '../App.css';
 const bull = (
     <Box
         component="span"
@@ -33,7 +33,7 @@ function Welcome() {
                             <br></br>
                             <br></br>
                             <br></br>
-                            <Link to="/agregarempleado">
+                            <Link to="/components/agregarempleado">
                                 <p align="center">
                                     <Button variant="outlined">Agregar Empleado</Button>
                                 </p>
@@ -43,9 +43,11 @@ function Welcome() {
                             <br></br>
                             <br></br>
                             <br></br>
+                            <Link to="/components/generarnomina">
                             <p align="center">
                                 <Button variant="outlined">Generar Nómina</Button>
                             </p>
+                            </Link>
                         </Grid>
                         <Grid h4 item xs={3}>
                             <br></br>
