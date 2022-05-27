@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Login from './login';
+import Infoempleado from './infoempleado';
 import reportWebVitals from './reportWebVitals';
-import Home from './home';
+
 import {
   BrowserRouter,
   Routes,
@@ -14,7 +15,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/login" element={<Login />}></Route>
-      <Route path="/home" element={<Home />}></Route>
+      <Route path="/infoempleado" element={<Infoempleado />}></Route>
     </Routes>
   </BrowserRouter>
 );
