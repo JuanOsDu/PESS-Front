@@ -1,15 +1,9 @@
-import { React, Fragment } from "react";
-import { Button, h4, Grid, Card, Box, CardContent, Typography, CardActions } from '@mui/material';
+import { React } from "react";
+import { Button, Grid, Card, Box } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Link } from 'react-router-dom';
 import '../App.css';
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-    </Box>
-);
+
 function Agregarempleado() {
     return (
         <div className="Agregarempleado">
@@ -29,7 +23,7 @@ function Agregarempleado() {
                     <br></br>
                     <Grid container spacing={1} className="container-son" >
                         <Grid h4 item xs={3} >
-                            Nombre
+                            Nombres
                             <p><input placeholder="" className="border" /></p>
                             Telefono
                             <p><input placeholder="" className="border" /></p>
@@ -43,7 +37,7 @@ function Agregarempleado() {
                         <Grid h4 item xs={3}>
                         </Grid>
                         <Grid h4 item xs={3}>
-                            Apellido
+                            Apellidos
                             <p><input placeholder="" className="border" /></p>
                             Correo Electrónico
                             <p><input placeholder="" className="border" /></p>
@@ -55,13 +49,7 @@ function Agregarempleado() {
                             <p><input placeholder="" className="border" /></p>
                         </Grid>
                         <Grid h4 item xs={3}>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                             <p align="right">
                                 <Button variant="outlined">Registrar Empleado</Button>
                             </p>
