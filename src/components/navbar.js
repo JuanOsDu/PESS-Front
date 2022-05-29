@@ -11,9 +11,6 @@ import Button from '@mui/material/Button';
 import AdbIcon from '@mui/icons-material/Adb';
 import MenuI from '../menuitem';
 
-// const rutas = ['/components/ConsultarEmpleado', '/components/agregarempleado', '/components/generarnomina','/login'];
-const settings = ['Consultar empleados', 'Agregar empleado', 'Generar nómina', 'Consultar nomina','Cerrar sesión'];
-
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -109,9 +106,6 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           </Box>
-
-
-
           <Box sx={{ flexGrow: 0 }}>  
               <Button color="inherit" onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <MenuI />
