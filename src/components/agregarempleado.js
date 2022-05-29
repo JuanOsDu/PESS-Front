@@ -8,16 +8,15 @@ import ResponsiveAppBar from "./navbar";
 function Agregarempleado() {
     return (
         <div className="Agregarempleado">
-            <ResponsiveAppBar/>
+            <ResponsiveAppBar />
             <Box className="card-insert" sx={{ minWidth: 250 }}>
                 <Card>
                     <div className="top">
                         <h1>Información del Empleado</h1>
                         <div className="top-content">
                             <Link to="/components/welcome">
-                                <Button variant="outlined" onclick="history.back()">
-                                    <ArrowBackIcon>
-                                    </ArrowBackIcon>
+                                <Button variant="outlined">
+                                    <ArrowBackIcon />
                                 </Button>
                             </Link>
                         </div>

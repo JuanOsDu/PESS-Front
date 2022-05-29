@@ -5,6 +5,7 @@ import Login from './login';
 import Agregarempleado from './components/agregarempleado';
 import Generarnomina from './components/generarnomina';
 import Welcome from './components/welcome';
+import Welcome2 from './components/welcome2';
 import reportWebVitals from './reportWebVitals';
 import ConsultarEmpleado from './components/ConsultarEmpleado';
 import ConsultarNomina from './components/ConsultarNomina';
@@ -23,6 +24,7 @@ root.render(
       <Route path="/components/agregarempleado" element={<Agregarempleado />}></Route>
       <Route path="/components/generarnomina" element={<Generarnomina />}></Route>
       <Route path="/components/welcome" element={<Welcome />}></Route>
+      <Route path="/components/welcome2" element={<Welcome2 />}></Route>
       <Route path="/components/ConsultarEmpleado" element={<ConsultarEmpleado />}></Route>
       <Route path="/components/ConsultarNomina" element={<ConsultarNomina />}></Route>
       <Route path="/components/navbar" element={<NavBar />}></Route>

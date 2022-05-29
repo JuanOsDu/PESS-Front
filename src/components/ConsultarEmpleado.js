@@ -1,4 +1,7 @@
-import { React, Item, Fragment } from 'react';
+import { React, Fragment } from 'react';
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -6,10 +9,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Grid, Input, TextField, Button } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete';
 import ResponsiveAppBar from './navbar';
-import Typography from '@mui/material/Typography';
 
 
 
@@ -25,9 +26,18 @@ const rows = [
 export default function ConsultarEmpleado() {
     return (
         <div>
-            <ResponsiveAppBar />            
-            <Fragment >
-                <h1 align="center">Listado de empleados</h1>
+            <ResponsiveAppBar />
+            <Fragment>
+                <div className='top'>
+                <h1>Lista de empleados</h1>
+                <div className="top-content">
+                <Link to="/components/welcome">
+                    <Button variant="outlined" onclick="history.back()">
+                        <ArrowBackIcon />
+                    </Button>
+                </Link>
+                </div>
+                </div>
                 <TableContainer component={Paper} item xs={8}>
                     <Table sx={{ minWidth: 650 }} aria-label="simple table">
                         <TableHead>
@@ -66,6 +76,7 @@ export default function ConsultarEmpleado() {
                     </Table>
                 </TableContainer>
 
-            </Fragment></div>
+            </Fragment>
+            </div>
     );
 }
