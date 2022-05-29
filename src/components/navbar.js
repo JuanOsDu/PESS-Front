@@ -11,9 +11,8 @@ import Button from '@mui/material/Button';
 import AdbIcon from '@mui/icons-material/Adb';
 import MenuI from '../menuitem';
 
-
-const rutas = ['/components/ConsultarEmpleado', '/components/agregarempleado', '/components/generarnomina','/login'];
-const settings = ['Consultar empleados', 'Agregar empleado', 'Generar nómina', 'Cerrar sesión'];
+// const rutas = ['/components/ConsultarEmpleado', '/components/agregarempleado', '/components/generarnomina','/login'];
+const settings = ['Consultar empleados', 'Agregar empleado', 'Generar nómina', 'Consultar nomina','Cerrar sesión'];
 
 
 const ResponsiveAppBar = () => {

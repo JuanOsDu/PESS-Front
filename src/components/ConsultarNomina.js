@@ -1,19 +1,32 @@
-import * as React from 'react';
+import { React, Item, Fragment, useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import ResponsiveAppBar from './navbar';
+import axios from 'axios';
+import Nomina from './Nomina';
+import Bonificaciones from './Bonificaciones';
 
 
-export default function BasicCard() {
+export default function ConsultarNomina() {
+    const [nominas, setNominas] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/api/nomina').then(res => {
+            setNominas(res.data);
+
+        });
+    }, []);
+    
     return (
         <div>
             <ResponsiveAppBar />
             <h1 align="center">Nomina</h1>
             <Card sx={{ minWidth: 275 }}>
-                <CardContent>
+                <CardHeader>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                         <p>
                             Nombre de la empresa
@@ -28,16 +41,11 @@ export default function BasicCard() {
                             País
                         </p>
                     </Typography>
-                    <Typography variant="h5" component="div">
-                        
-                    </Typography>
-                   
-                    <Typography variant="body2">
-                       <p align="end">Cheque No.</p>
-                        well meaning and kindly.
-                        <br />
-                    </Typography>
-                </CardContent>                
+                </CardHeader>
+                {nominas.map((row) => (
+                    <Nomina key={row._id} nomina={row}></Nomina>
+                ))}
+                
             </Card>
             <Link to="">
                 <p align="center">

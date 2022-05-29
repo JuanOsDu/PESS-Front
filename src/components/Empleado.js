@@ -2,6 +2,7 @@ import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import DeleteIcon from '@mui/icons-material/Delete';
+import FileOpenIcon from '@mui/icons-material/FileOpen';
 const Empleado = ({ empleado }) => {
     return (
         <TableRow
@@ -12,13 +13,14 @@ const Empleado = ({ empleado }) => {
                 {empleado.nombre}
             </TableCell>
             <TableCell >{empleado.apellidos}</TableCell>
-            <TableCell align="right">{empleado.telefono}</TableCell>
-            <TableCell align="right">{empleado.email}</TableCell>
-            <TableCell align="right">{empleado.usuario_id}</TableCell>
-            <TableCell align="right">{empleado.cargo}</TableCell>
-            <TableCell align="right">{empleado.departamento}</TableCell>
-            <TableCell align="right">{empleado.salario}</TableCell>
-            <TableCell align="right"><DeleteIcon /></TableCell>
+            <TableCell >{empleado.telefono}</TableCell>
+            <TableCell >{empleado.email}</TableCell>
+            <TableCell >{empleado.usuario_id}</TableCell>
+            <TableCell >{empleado.cargo}</TableCell>
+            <TableCell >{empleado.departamento}</TableCell>
+            <TableCell >{empleado.salario}</TableCell>
+            <TableCell align="center"><DeleteIcon /></TableCell>
+            <TableCell align="center"><FileOpenIcon /></TableCell>
         </TableRow>
 
 
