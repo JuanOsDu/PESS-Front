@@ -1,4 +1,4 @@
-import { React, Item, Fragment } from 'react';
+import { React, Item, Fragment, useState, useEffect } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -10,8 +10,8 @@ import { Grid, Input, TextField, Button } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete';
 import ResponsiveAppBar from './navbar';
 import Typography from '@mui/material/Typography';
-
-
+import Empleado from './Empleado';
+import axios from 'axios';
 
 
 function createData(name, calories, fat, carbs, protein) {
@@ -22,10 +22,23 @@ const rows = [
     createData('Frozen yoghurt', 159, 6.0, 24, 4.0)
 ];
 
+
 export default function ConsultarEmpleado() {
+    const [empleados, setEmpleados] = useState([]);
+
+
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/api/empleado').then(res => {
+            setEmpleados(res.data);
+          
+        });
+    }, []);
+
+
     return (
         <div>
-            <ResponsiveAppBar />            
+            <ResponsiveAppBar />
             <Fragment >
                 <h1 align="center">Listado de empleados</h1>
                 <TableContainer component={Paper} item xs={8}>
@@ -44,23 +57,8 @@ export default function ConsultarEmpleado() {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {rows.map((row) => (
-                                <TableRow
-                                    key={row.name}
-                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                >
-                                    <TableCell component="th" scope="row">
-                                        {row.name}
-                                    </TableCell>
-                                    <TableCell >{row.calories}</TableCell>
-                                    <TableCell align="right">{row.fat}</TableCell>
-                                    <TableCell align="right">{row.carbs}</TableCell>
-                                    <TableCell align="right">{row.protein}</TableCell>
-                                    <TableCell align="right">{row.protein}</TableCell>
-                                    <TableCell align="right">{row.protein}</TableCell>
-                                    <TableCell align="right">{row.protein}</TableCell>
-                                    <TableCell align="right"><DeleteIcon /></TableCell>
-                                </TableRow>
+                            {empleados.map((row) => (
+                                <Empleado key={row._id} empleado={row}></Empleado>
                             ))}
                         </TableBody>
                     </Table>
