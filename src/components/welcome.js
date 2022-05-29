@@ -1,18 +1,13 @@
-import { React, Fragment } from "react";
-import { Button, h4, Grid, Card, Box, CardContent, Typography, CardActions } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { React } from "react";
+import { Button, Grid, Card, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import '../App.css';
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-    </Box>
-);
+import ResponsiveAppBar from './navbar';
+
 function Welcome() {
     return (
         <div className="Welcome">
+            <ResponsiveAppBar/>
             <Box className="card-insert" sx={{ minWidth: 250 }}>
                 <Card>
                     <div className="top">
@@ -22,18 +17,13 @@ function Welcome() {
                     <Grid container spacing={1} className="container-son" >
                         <Grid h4 item xs={3} >
                             <br></br>
-                            <br></br>
-                            <br></br>
                             <Link to="/components/ConsultarEmpleado">
                             <p align="center">
-
                                 <Button variant="outlined">Consultar Empleado</Button>
                             </p>
                             </Link>
                         </Grid>
                         <Grid h4 item xs={3}>
-                            <br></br>
-                            <br></br>
                             <br></br>
                             <Link to="/components/agregarempleado">
                                 <p align="center">
@@ -43,8 +33,6 @@ function Welcome() {
                         </Grid>
                         <Grid h4 item xs={3}>
                             <br></br>
-                            <br></br>
-                            <br></br>
                             <Link to="/components/generarnomina">
                             <p align="center">
                                 <Button variant="outlined">Generar Nómina</Button>
@@ -52,8 +40,6 @@ function Welcome() {
                             </Link>
                         </Grid>
                         <Grid h4 item xs={3}>
-                            <br></br>
-                            <br></br>
                             <br></br>
                             <Link to="/login">
                                 <p align="center">

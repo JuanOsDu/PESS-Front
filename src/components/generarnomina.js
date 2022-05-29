@@ -20,8 +20,7 @@ function Generarnomina() {
                         <div className="top-content">
                             <Link to="/components/welcome">
                                 <Button variant="outlined" onclick="history.back()">
-                                    <ArrowBackIcon>
-                                    </ArrowBackIcon>
+                                    <ArrowBackIcon/>
                                 </Button>
                             </Link>
                         </div>
