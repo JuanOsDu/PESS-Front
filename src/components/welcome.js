@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import ResponsiveAppBar from './navbar';
 
+
 function Welcome() {
     return (
         <div className="Welcome">

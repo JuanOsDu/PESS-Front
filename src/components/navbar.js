@@ -8,12 +8,11 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
 import AdbIcon from '@mui/icons-material/Adb';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import MenuI from '../menuitem';
 
-// const rutas = ['/components/ConsultarEmpleado', '/components/agregarempleado', '/components/generarnomina','/login'];
+
+const rutas = ['/components/ConsultarEmpleado', '/components/agregarempleado', '/components/generarnomina','/login'];
 const settings = ['Consultar empleados', 'Agregar empleado', 'Generar nómina', 'Cerrar sesión'];
 
 
@@ -50,7 +49,7 @@ const ResponsiveAppBar = () => {
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
-              fontWeight: 700,
+              fontWeight: 300,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
@@ -112,35 +111,12 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           </Box>
 
+
+
           <Box sx={{ flexGrow: 0 }}>  
               <Button color="inherit" onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              Nombre usuario
-              <ArrowDropDownIcon/>
-              </Button>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu =>(
-                  <Link/>
-                )}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+              <MenuI />
+              </Button> 
           </Box>
         </Toolbar>
       </Container>

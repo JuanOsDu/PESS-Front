@@ -9,9 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import DeleteIcon from '@mui/icons-material/Delete';
 import ResponsiveAppBar from './navbar';
-import Typography from '@mui/material/Typography';
 import Empleado from './Empleado';
 import axios from 'axios';
 
