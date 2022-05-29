@@ -14,7 +14,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 // const rutas = ['/components/ConsultarEmpleado', '/components/agregarempleado', '/components/generarnomina','/login'];
-const settings = ['Consultar empleados', 'Agregar empleado', 'Generar nómina', 'Cerrar sesión'];
+const settings = ['Consultar empleados', 'Agregar empleado', 'Generar nómina', 'Consultar nomina','Cerrar sesión'];
 
 
 const ResponsiveAppBar = () => {
