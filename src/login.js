@@ -1,7 +1,7 @@
 
 import './App.css';
-import { React, Item, Fragment, useState } from 'react';
-import { Grid, Input, TextField, Button } from '@mui/material'
+import { React, Fragment, useState } from 'react';
+import { Grid, TextField, Button } from '@mui/material'
 import { Link } from 'react-router-dom';
 import im from './media/logito.png'
 import axios from 'axios';
@@ -112,8 +112,8 @@ function Login() {
               {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
             </div>
             <div>
-              <Link to="/components/welcome">
-                <Button variant="outlined">Ingresar</Button>
+              <Link to="/components/welcome" style={{textDecoration:'none'}}>
+                <Button variant="contained" color="success">Ingresar</Button>
               </Link>
             </div>
             <nav>

@@ -80,34 +80,41 @@ export default function CustomizedMenus() {
                 open={open}
                 onClose={handleClose}
             >
-                <Link to="/components/ConsultarEmpleado" style={{ textDecoration: 'none', color:'inherit' }}>
-                <MenuItem onClick={handleClose} disableRipple>
-                    Consultar Empleado
-                </MenuItem>
+
+                <Link to="/components/welcome" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem onClick={handleClose} disableRipple>
+                        Inicio
+                    </MenuItem>
                 </Link>
 
-                <Link to="/components/agregarempleado" style={{ textDecoration: 'none', color:'inherit' }}>
-                <MenuItem onClick={handleClose} disableRipple>
-                    Agregar Empleado
-                </MenuItem>
+                <Link to="/components/ConsultarEmpleado" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem onClick={handleClose} disableRipple>
+                        Consultar Empleado
+                    </MenuItem>
                 </Link>
 
-                <Link to="/components/ConsultarNomina" style={{ textDecoration: 'none', color:'inherit' }}>
-                <MenuItem onClick={handleClose} disableRipple>
-                    Consultar Nómina
-                </MenuItem>
+                <Link to="/components/agregarempleado" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem onClick={handleClose} disableRipple>
+                        Agregar Empleado
+                    </MenuItem>
                 </Link>
 
-                <Link to="/components/generarnomina" style={{ textDecoration: 'none', color:'inherit'}}>
-                <MenuItem onClick={handleClose} disableRipple>
-                    Generar Nómina
-                </MenuItem>
+                <Link to="/components/ConsultarNomina" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem onClick={handleClose} disableRipple>
+                        Consultar Nómina
+                    </MenuItem>
                 </Link>
 
-                <Link to="/login" style={{ textDecoration: 'none', color:'inherit' }}>
-                <MenuItem onClick={handleClose} disableRipple>
-                    Cerrar Sesión
-                </MenuItem>
+                <Link to="/components/generarnomina" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem onClick={handleClose} disableRipple>
+                        Generar Nómina
+                    </MenuItem>
+                </Link>
+
+                <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem onClick={handleClose} disableRipple>
+                        Cerrar Sesión
+                    </MenuItem>
                 </Link>
 
             </StyledMenu>

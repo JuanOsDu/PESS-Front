@@ -1,6 +1,5 @@
-import { React, Item, Fragment, useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -8,7 +7,7 @@ import { Link } from 'react-router-dom';
 import ResponsiveAppBar from './navbar';
 import axios from 'axios';
 import Nomina from './Nomina';
-import Bonificaciones from './Bonificaciones';
+// import Bonificaciones from './Bonificaciones';
 
 
 export default function ConsultarNomina() {
@@ -47,9 +46,9 @@ export default function ConsultarNomina() {
                 ))}
                 
             </Card>
-            <Link to="">
+            <Link to="" style={{ textDecoration: 'none'}}>
                 <p align="center">
-                    <Button variant="outlined">Exportar PDF</Button>
+                    <Button variant="contained" color="success" >Exportar PDF</Button>
                 </p>
             </Link>
         </div>

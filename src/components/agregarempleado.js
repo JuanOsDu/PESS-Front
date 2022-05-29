@@ -1,9 +1,9 @@
 import { React } from "react";
 import { Button, Grid, Card, Box } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Link } from 'react-router-dom';
 import '../App.css';
 import ResponsiveAppBar from "./navbar";
+import { Link } from 'react-router-dom';
+
 
 function Agregarempleado() {
     return (
@@ -14,11 +14,6 @@ function Agregarempleado() {
                     <div className="top">
                         <h1>Información del Empleado</h1>
                         <div className="top-content">
-                            <Link to="/components/welcome">
-                                <Button variant="outlined">
-                                    <ArrowBackIcon />
-                                </Button>
-                            </Link>
                         </div>
                     </div>
                     <br></br>
@@ -51,9 +46,11 @@ function Agregarempleado() {
                         </Grid>
                         <Grid h4 item xs={3}>
                             <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            <Link to="" style={{textDecoration:'none'}}>
                             <p align="right">
-                                <Button variant="outlined">Registrar Empleado</Button>
+                                <Button variant="contained" color="success">Registrar Empleado</Button>
                             </p>
+                            </Link>
                         </Grid>
                     </Grid>
                 </Card>

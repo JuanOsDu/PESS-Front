@@ -1,7 +1,4 @@
-import { React, Item, Fragment, useState, useEffect } from 'react';
-import { Button } from '@mui/material';
-import { Link } from 'react-router-dom';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { React, Fragment, useState, useEffect } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -34,11 +31,6 @@ export default function ConsultarEmpleado() {
                 <div className='top'>
                 <h1>Lista de empleados</h1>
                 <div className="top-content">
-                <Link to="/components/welcome">
-                    <Button variant="outlined" onclick="history.back()">
-                        <ArrowBackIcon />
-                    </Button>
-                </Link>
                 </div>
                 </div>
                 <TableContainer component={Paper} item xs={8}>

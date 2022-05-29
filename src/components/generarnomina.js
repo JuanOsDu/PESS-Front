@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { Button, Grid, Card, Box} from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Link } from 'react-router-dom';
 import '../App.css';
 import { StyledEngineProvider } from '@mui/material/styles';
 import Date from '../date.js';
 import Selector from '../selector.js';
 import ResponsiveAppBar from './navbar';
+import { Link } from 'react-router-dom';
 
 
 function Generarnomina() {
@@ -18,11 +17,6 @@ function Generarnomina() {
                     <div className="top">
                         <h1>Información de los Ingresos</h1>
                         <div className="top-content">
-                            <Link to="/components/welcome">
-                                <Button variant="outlined" onclick="history.back()">
-                                    <ArrowBackIcon/>
-                                </Button>
-                            </Link>
                         </div>
                     </div>
                     <br></br>
@@ -47,9 +41,11 @@ function Generarnomina() {
                         </Grid>
                         <Grid h4 item xs={3}>
                             <br></br><br></br><br></br>
+                            <Link to="" style={{ textDecoration: 'none'}}>
                             <p align="right">
-                                <Button variant="outlined">Crear Recibo de Nómina</Button>
+                                <Button variant="contained" color="success">Crear Recibo de Nómina</Button>
                             </p>
+                            </Link>
                         </Grid>
                     </Grid>
 
