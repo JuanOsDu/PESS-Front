@@ -16,15 +16,6 @@ import Empleado from './Empleado';
 import axios from 'axios';
 
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0)
-];
-
-
 export default function ConsultarEmpleado() {
     const [empleados, setEmpleados] = useState([]);
 
@@ -57,14 +48,15 @@ export default function ConsultarEmpleado() {
                         <TableHead>
                             <TableRow>
                                 <TableCell>Nombre</TableCell>
-                                <TableCell >Apellidos</TableCell>
-                                <TableCell align="right">Teléfono</TableCell>
-                                <TableCell align="right">Correo</TableCell>
-                                <TableCell align="right">No. Identificación</TableCell>
-                                <TableCell align="right">Cargo</TableCell>
-                                <TableCell align="right">Departamento</TableCell>
-                                <TableCell align="right">Salario mensual</TableCell>
-                                <TableCell align="right">Eliminar</TableCell>
+                                <TableCell>Apellidos</TableCell>
+                                <TableCell>Teléfono</TableCell>
+                                <TableCell>Correo</TableCell>
+                                <TableCell>No. Identificación</TableCell>
+                                <TableCell>Cargo</TableCell>
+                                <TableCell>Departamento</TableCell>
+                                <TableCell>Salario mensual</TableCell>
+                                <TableCell>Eliminar</TableCell>
+                                <TableCell>Consultar nomina</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -74,7 +66,6 @@ export default function ConsultarEmpleado() {
                         </TableBody>
                     </Table>
                 </TableContainer>
-
             </Fragment>
             </div>
     );
