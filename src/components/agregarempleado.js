@@ -3,10 +3,12 @@ import { Button, Grid, Card, Box } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import ResponsiveAppBar from "./navbar";
 
 function Agregarempleado() {
     return (
         <div className="Agregarempleado">
+            <ResponsiveAppBar/>
             <Box className="card-insert" sx={{ minWidth: 250 }}>
                 <Card>
                     <div className="top">

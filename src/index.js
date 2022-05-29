@@ -6,6 +6,9 @@ import Agregarempleado from './components/agregarempleado';
 import Generarnomina from './components/generarnomina';
 import Welcome from './components/welcome';
 import reportWebVitals from './reportWebVitals';
+import ConsultarEmpleado from './components/ConsultarEmpleado';
+import ConsultarNomina from './components/ConsultarNomina';
+import NavBar from './components/navbar';
 
 import {
   BrowserRouter,
@@ -20,6 +23,9 @@ root.render(
       <Route path="/components/agregarempleado" element={<Agregarempleado />}></Route>
       <Route path="/components/generarnomina" element={<Generarnomina />}></Route>
       <Route path="/components/welcome" element={<Welcome />}></Route>
+      <Route path="/components/ConsultarEmpleado" element={<ConsultarEmpleado />}></Route>
+      <Route path="/components/ConsultarNomina" element={<ConsultarNomina />}></Route>
+      <Route path="/components/navbar" element={<NavBar />}></Route>
     </Routes>
   </BrowserRouter>
 );

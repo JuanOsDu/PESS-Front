@@ -24,10 +24,12 @@ function Welcome() {
                             <br></br>
                             <br></br>
                             <br></br>
+                            <Link to="/components/ConsultarEmpleado">
                             <p align="center">
+
                                 <Button variant="outlined">Consultar Empleado</Button>
                             </p>
-
+                            </Link>
                         </Grid>
                         <Grid h4 item xs={3}>
                             <br></br>
@@ -62,6 +64,7 @@ function Welcome() {
                     </Grid>
                 </Card>
             </Box>
+            
         </div >
     );
 }

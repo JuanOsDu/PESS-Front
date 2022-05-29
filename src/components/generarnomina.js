@@ -6,11 +6,13 @@ import '../App.css';
 import { StyledEngineProvider } from '@mui/material/styles';
 import Date from '../date.js';
 import Selector from '../selector.js';
+import ResponsiveAppBar from './navbar';
 
 
 function Generarnomina() {
     return (
         <div className="Generarnomina">
+            <ResponsiveAppBar/>
             <Box className="card-insert" sx={{ minWidth: 250 }}>
                 <Card>
                     <div className="top">
