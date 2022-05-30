@@ -1,9 +1,10 @@
 import React from 'react';
-
+import Bonificacion from './Bonificacion';
 const Bonificaciones = ({ bonificaciones }) => {
     return (
-        <p key={bonificaciones._id}>Porcentaje {bonificaciones.porcentaje}
-            Tipo{bonificaciones.tipo}Descripción {bonificaciones.descripcion}</p>
+        bonificaciones.map((bonificacion)=>{
+           return <Bonificacion key={bonificacion} bonificacion={bonificacion}></Bonificacion>
+        })
     );
 }
 export default Bonificaciones;

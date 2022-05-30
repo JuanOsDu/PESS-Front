@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material'
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -19,8 +21,12 @@ const Empleado = ({ empleado }) => {
             <TableCell >{empleado.cargo}</TableCell>
             <TableCell >{empleado.departamento}</TableCell>
             <TableCell >{empleado.salario}</TableCell>
-            <TableCell align="center"><DeleteIcon /></TableCell>
-            <TableCell align="center"><FileOpenIcon /></TableCell>
+            <TableCell align="center">   <Button><DeleteIcon /> </Button>    </TableCell>
+
+            <TableCell align="center"><Link to={{
+                pathname: "/components/ConsultarNomina",
+                search: "?_id="+empleado._id
+            }} ><Button><FileOpenIcon /></Button></Link></TableCell>
         </TableRow>
 
 

@@ -69,7 +69,7 @@ export default function CustomizedMenus() {
                 onClick={handleClick}
                 endIcon={<KeyboardArrowDownIcon />}
             >
-                Nombre Empleado
+                Sistema de nomina
             </Button>
             <StyledMenu
                 id="demo-customized-menu"

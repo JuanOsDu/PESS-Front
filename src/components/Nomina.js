@@ -5,12 +5,11 @@ import CardContent from '@mui/material/CardContent';
 import axios from 'axios';
 import Bonificaciones from './Bonificaciones';
 
-const Nomina = ({ nomina }) => {
-    
+const Nomina = ({ nomina }) => {  
   
     return (
         <CardContent
-        key={nomina._id}
+        key={nomina._id} style={{backgroundColor: "#ADDED6", margin: "40px", padding:"30px"}}
         >
             <Typography variant="h5" component="div">
         Declaración de ganancias
@@ -19,7 +18,7 @@ const Nomina = ({ nomina }) => {
                 <p align="end">Cheque No.{nomina.numero_cheque}</p>
                 <p>Fecha de inicio del pago {nomina.fecha_inicio_pago}</p>
                 <p>Fin del periodo de pago {nomina.fecha_fin_pago}</p>
-                
+                <Bonificaciones bonificaciones={nomina.bonificaciones}></Bonificaciones>
                 <DeleteIcon /> </Typography>
         </CardContent>
     );

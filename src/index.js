@@ -25,6 +25,7 @@ root.render(
       <Route path="/components/welcome" element={<Welcome />}></Route>
       <Route path="/components/ConsultarEmpleado" element={<ConsultarEmpleado />}></Route>
       <Route path="/components/ConsultarNomina" element={<ConsultarNomina />}></Route>
+      <Route path="*" element={<Login />}></Route>
     </Routes>
   </BrowserRouter>
 );
