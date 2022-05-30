@@ -9,7 +9,7 @@
 
 .img{
   object-fit: contain ;
-  border-right: 1px solid black;
+  
   background-repeat: no-repeat;
   width: 100% !important;
 }
@@ -29,6 +29,9 @@
   object-fit: cover !important;
   width: 100%;
   height:100%;
+}
+.imgBg{
+  width: 100%;
 }
 .fill img {
   flex-shrink: 0;

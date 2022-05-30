@@ -14,14 +14,15 @@ import axios from 'axios';
 export default function ConsultarEmpleado() {
     const [empleados, setEmpleados] = useState([]);
 
-
+    
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/empleado').then(res => {
+        axios.get('http://localhost:3001/api/empleado').then(res => {
             setEmpleados(res.data);
           
-        });
+        }).catch((err)=>console.log(err));
     }, []);
+    console.log(empleados)
 
 
     return (

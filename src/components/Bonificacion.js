@@ -3,7 +3,7 @@ import axios from 'axios';
 const Bonificacion = ({ bonificacion }) => {
     const [boni, setBoni] = useState({});
     useEffect(() => {
-        const url = `http://localhost:3000/api/bonificaciones/${bonificacion}`;
+        const url = `http://localhost:3001/api/bonificaciones/${bonificacion}`;
         console.log(url)
         axios.get(url).then((data) => {
 

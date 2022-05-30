@@ -35,7 +35,7 @@ function Login() {
       correo: uname.value,
       contraseña: pass.value
     })
-    axios.post('http://localhost:3000/api/login', {
+    axios.post('http://localhost:3001/api/login', {
       correo: uname.value,
       contraseña: pass.value
     }).then(function (response) {
@@ -86,7 +86,7 @@ function Login() {
 
         <div className="button-container">
 
-          <input type="submit" />
+          
         </div>
       </form>
     </div>
@@ -116,9 +116,7 @@ function Login() {
                 <Button variant="contained" color="success">Ingresar</Button>
               </Link>
             </div>
-            <nav>
-              <Link to="https://www.facebook.com/">Ir Facebook</Link>
-            </nav>
+            
           </Grid>
         </Grid>
       </Fragment>
